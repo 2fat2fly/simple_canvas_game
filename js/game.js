@@ -92,19 +92,19 @@ if(HReady){
 ctx.drawImage(HImage, hero.x , hero.y);
 }
 };
-//the main game Loop
-var main = function(){
-var now = Date.now();
-var delta = now - then;
-update(delta/1000);
-render;
-then = now;
-if (NPC1.health <= 0){
-	reset;
-}
-}
+// The main game loop
+var main = function () {
+        var now = Date.now();
+        var delta = now - then;
+
+        update(delta / 1000);
+        render();
+
+        then = now;
 };
-//lets play the game
-var then = Date.Now();
-setInterwal(main, 1);
+
+// Let's play this game!
+reset();
+var then = Date.now();
+setInterval(main, 1); // Execute as fast as possible
 
