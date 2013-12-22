@@ -88,7 +88,7 @@ var update = function (modifier) {
         ctx.font = "72px Helvetica";
         ctx.textAlign = "left";
         ctx.textBaseline = "top";
-        ctx.fillText("VICTORY", canvas.width / 2, canvas.height / 2);
+        ctx.fillText("VICTORY", 0,0);
         timer = 30;
 };
         if (timer >= 30 && monstersCaught < 20){
@@ -96,7 +96,7 @@ var update = function (modifier) {
         ctx.font = "72px Helvetica";
         ctx.textAlign = "left";
         ctx.textBaseline = "top";
-        ctx.fillText("LOSERY", canvas.width / 2, canvas.height / 2);
+        ctx.fillText("LOSERY", 0, 0);
         timer = 30;
 };
 
