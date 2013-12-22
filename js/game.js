@@ -30,6 +30,7 @@ monsterImage.onload = function () {
 monsterImage.src = "images/monster.png";
 
 // Game objects
+var timer = 0;
 var hero = {
         speed: 256,
         x: canvas.width / 2,
@@ -81,6 +82,7 @@ var update = function (modifier) {
                 ++monstersCaught;
                 reset();
         }
+        timer += modifier
 };
 
 // Draw everything
@@ -103,6 +105,7 @@ var render = function () {
         ctx.textAlign = "left";
         ctx.textBaseline = "top";
         ctx.fillText("Goblins caught: " + monstersCaught, 32, 32);
+        ctx.fillText("time: " + timer, 64, 64);
 };
 
 // The main game loop
