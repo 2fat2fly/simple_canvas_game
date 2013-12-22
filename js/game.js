@@ -83,22 +83,6 @@ var update = function (modifier) {
                 reset();
         }
         timer += modifier;
-        if (timer >= 30 && monstersCaught >= 20){
-                  ctx.fillStyle = "rgb(250, 250, 250)";
-        ctx.font = "72px Helvetica";
-        ctx.textAlign = "left";
-        ctx.textBaseline = "top";
-        ctx.fillText("VICTORY", 0,0);
-        timer = 30;
-};
-        if (timer >= 30 && monstersCaught < 20){
-                      ctx.fillStyle = "rgb(250, 250, 250)";
-        ctx.font = "72px Helvetica";
-        ctx.textAlign = "left";
-        ctx.textBaseline = "top";
-        ctx.fillText("LOSERY", 0, 0);
-        timer = 30;
-};
 
 };
 
@@ -123,7 +107,25 @@ var render = function () {
         ctx.textBaseline = "top";
         ctx.fillText("Goblins caught: " + monstersCaught, 32, 32);
         ctx.fillText("time: " + Math.round(timer), 64, 64);
+                if (timer >= 30 && monstersCaught >= 20){
+                  ctx.fillStyle = "rgb(250, 250, 250)";
+        ctx.font = "24px Helvetica";
+        ctx.textAlign = "left";
+        ctx.textBaseline = "top";
+        ctx.fillText("VICTORY", 0,0);
+        timer = 30;
 };
+        if (timer >= 30 && monstersCaught < 20){
+                      ctx.fillStyle = "rgb(250, 250, 250)";
+        ctx.font = "72px Helvetica";
+        ctx.textAlign = "left";
+        ctx.textBaseline = "top";
+        ctx.fillText("LOSERY", 0, 0);
+        timer = 30;
+};
+
+};
+        
 
 // The main game loop
 var main = function () {
