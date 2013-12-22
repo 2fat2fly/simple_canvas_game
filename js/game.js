@@ -70,22 +70,7 @@ var update = function (modifier) {
         }
 
         }
-        if(hero.x - monster.x =< hero.range && (32 in keysDown) && (hero.y - monster.y = <hero.range){
-monster.health -= 5;
-setTimeout(1000);
-};
-if(monster.x - hero.x =< hero.range && (32 in keysDown) && (hero.y - monster.y = <hero.range){
-monster.health -= 5;
-setTimeout(1000);
-};
-if(monster.x - hero.x =< hero.range && (32 in keysDown) && (monster.y - hero.y = <hero.range){
-monster.health -= 5;
-setTimeout(1000);
-};  
-if(hero.x - monster.x =< hero.range && (32 in keysDown) && (monster.y - hero.y = <hero.range){
-monster.health -= 5;
-setTimeout(1000);
-}; 
+
 };
 
 // Draw everything
